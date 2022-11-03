@@ -1,0 +1,46 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+}
+#main{
+    min-height: 83.85vh;
+    max-width: 100vw;
+    width: 70vw;
+    margin: auto;
+}
+html {
+    scroll-behavior: smooth;
+  }
+@font-face {
+    font-family: 'dancing_scriptregular';
+    src: url('../fonts/dancingscript-variablefont_wght-webfont.woff2') format('woff2'),
+         url('../fonts/dancingscript-variablefont_wght-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'amatic_scbold';
+    src: url('../fonts/amaticsc-bold-webfont.woff2') format('woff2'),
+         url('../fonts/amaticsc-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'amatic_scregular';
+    src: url('../fonts/amaticsc-regular-webfont.woff2') format('woff2'),
+         url('../fonts/amaticsc-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'homemade_appleregular';
+    src: url('../fonts/homemadeapple-regular-webfont.woff2') format('woff2'),
+         url('../fonts/homemadeapple-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+

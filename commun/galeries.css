@@ -1,0 +1,172 @@
+
+/* <section class="section_galerie">
+    <div class="deco_galerie deco_top_galerie">
+        <div class="motif_separation_galerie motif__top_galerie"></div>
+    </div>
+    <div class="in_section_galerie">
+        <div class="navigation_carrousel_galerie reculer_carrousel_galerie"></div>
+        <div class="scene_carrousel_galerie">
+            <div class="carrousel_galerie">
+                <img src="https://picsum.photos/300?random=16" alt="photo">
+                <img src="https://picsum.photos/300?random=17" alt="photo">
+                <img src="https://picsum.photos/300?random=18" alt="photo">
+            </div>
+        </div>
+        <div class="navigation_carrousel_galerie avancer_carrousel_galerie"></div>
+        <p class="description_objet">Lorem</p>
+    </div>
+    <div class="deco_galerie deco_bottom_galerie">
+        <div class="motif_separation_galerie motif__bot_galerie"></div>
+    </div>
+</section> */
+/**************** Général **********************/
+.section_galerie{
+    display: flex;    
+    flex-direction: column;
+    background-color: /*#fefee2*/#f1f1ad;
+    margin: 0;
+    padding: 0 30px;
+    min-height: 380px;
+    border-top: 1px solid black;
+
+}
+.section_galerie .in_section_galerie{
+    display: flex;
+}
+.section_galerie:nth-child(2n+1) .in_section_galerie{
+    flex-direction: row;
+}
+.section_galerie:nth-child(2n) .in_section_galerie{
+    flex-direction: row-reverse;
+}
+.scene_carrousel_galerie img{
+    /*box-shadow: 2px 2px 4px black;*/
+    opacity: 0.7;
+    transition: opacity .3s;
+}
+.section_galerie p{
+    text-align: justify;
+}
+.section_galerie:nth-child(2n+1) p{
+    margin-left: 340px;
+}
+.section_galerie:nth-child(2n) p{
+    margin-right: 340px;
+}
+
+/*separation sections*/
+.deco_galerie{
+    width: 100%;
+}
+.deco_top_galerie{
+    margin-bottom: 30px;
+}
+.deco_bottom_galerie{
+    transform: rotateZ(180deg);
+}
+.push_deco_bot{
+    flex: 1;
+}
+.motif_separation_galerie{
+    height: 0px;
+    width: 0px;
+    border: 10px solid transparent;
+    border-top-color: black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/****** :hover general *******************/
+.section_galerie:hover{
+    background-color: #f5f5dc;
+}
+.section_galerie:hover .scene_carrousel_galerie img{
+    opacity: 1;
+}
+.section_galerie:nth-child(2n+1):hover p{
+    margin-left: 300px;
+}
+.section_galerie:nth-child(2n):hover p{
+    margin-right: 300px;
+}
+/****************************** Carrousel ****************/
+/*fleches navigations*/
+.navigation_carrousel_galerie{
+    position: relative;
+    width: 0;
+    height: 0;
+    top: 140px;
+    border-top: 0px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid grey;
+    transition: border-bottom-color .3s;
+}
+.navigation_carrousel_galerie:hover{
+    cursor: grab;
+    border-bottom-color: #c9965a;
+}
+.section_galerie:nth-child(2n) .avancer_carrousel_galerie{
+    transform: rotateZ(90deg);
+    left: 37px;
+}
+.section_galerie:nth-child(2n) .reculer_carrousel_galerie{
+    transform: rotateZ(-90deg);
+    left: -300px;
+}
+.section_galerie:nth-child(2n+1) .avancer_carrousel_galerie{
+    transform: rotateZ(90deg);
+    left: 277px;
+}
+.section_galerie:nth-child(2n+1) .reculer_carrousel_galerie{
+    transform: rotateZ(-90deg);
+    left: -20px;
+}
+/*
+.reculer_carrousel_galerie{
+    transform: rotateZ(-90deg);
+    left: -20px;
+}
+.avancer_carrousel_galerie{
+    transform: rotateZ(90deg);
+    left: 280px;
+}*/
+.section_galerie .navigation_carrousel_galerie{
+    display: none;
+}
+.section_galerie:hover .navigation_carrousel_galerie{
+    display: block;
+}
+
+/***************images********************/
+.scene_carrousel_galerie{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+.carrousel_galerie{
+    position: relative;   
+    width: 300%;
+    padding: 0;
+    margin: 0;
+    transition: all .5s;
+}
+
+.carrousel_galerie > img{
+    width: 33%;
+    padding: 0;
+    margin: 0;
+}
+
+/*
+    <div class="scene_carrousel_galerie">
+        <div id="carrousel_galerie">
+            <img src="https://picsum.photos/300?random=1" alt="photo">
+            <img src="https://picsum.photos/300?random=2" alt="photo">
+            <img src="https://picsum.photos/300?random=3" alt="photo">
+        </div>
+    </div>
+*/

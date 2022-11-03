@@ -1,0 +1,118 @@
+/* 
+    <div class="scene_container_galerie">
+        <div class="part_container_galerie ">
+           <a href="./objets.php">
+            <div class="sous_part">
+                <div class="part_objet">
+                    <img src="https://picsum.photos/id/200/2716/2716" alt="image galerie objets">
+                    <h1 class="titre_objet">LES OBJETS</h1>
+                </div>
+            </div>
+           </a>
+        </div>
+        <div class="part_container_galerie">
+            <a href="./vetements.php">
+                <div class="sous_part">
+                    <div class="part_vetement">
+                        <img src="https://picsum.photos/id/201/2716/2716" alt="image galerie objets">
+                        <h1 class="titre_vetements">LES VETEMENTS</h1>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+*/
+
+
+/* 1920 x 1080px */
+/* definition de la scene / 2 img penchées */
+#main{
+    width: 100vw;
+    height: 81.7vh;
+    overflow: hidden;
+}
+.scene_container_galerie {
+    width: 5432px;
+    height: 2716px; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transform-origin: center;
+    transform:  translate3d(-1756px,-818px,0px) rotatez(45deg);
+}
+.part_container_galerie{
+    width: 2716px;
+    height: 2716px;
+    overflow: hidden;
+}
+.part_objet{
+    transform: translatex(398px);
+}
+.part_vetement{
+    transform: translatex(-398px);
+}
+.sous_part{
+    width: 2716px;
+    height: 2716px;
+    transform: rotateZ(-45deg);
+}
+.final{
+    width: 1921px;
+    height: 1081px;
+    position: relative;
+}
+.final_objet{
+    /* base à : 
+    top: 1496px;
+    left: 1076px;*/
+    top: 1496px;
+    left: 1076px;
+}
+.final_vetement{
+    /* base à :
+    left: -280px;
+    top: 139px; */
+    left: -280px;
+    top: 139px;
+}
+
+/*     position: absolute;
+    left: 20%;
+    top: 50%;
+    color: white;
+    background-color: red; */
+
+.final img{
+    opacity: .6;
+    transition: all .3s;
+}
+.scene_container_galerie a:hover img{
+    opacity: 1;
+}
+.container_h1{
+    position: absolute;
+    background-color: powderblue;
+    padding: 15px;
+}
+.scene_container_galerie h1{
+    z-index: 1000000000;
+    padding: 10px;
+    margin: 0;
+    color: black;
+    background: linear-gradient(to top, transparent 0%, transparent 15%,rgba(254,230,97,.5) 15%, rgba(254,230,97,.5) 50%, transparent 5px) no-repeat ;
+    background-size: 0% 100%;
+    transition: all .3s ease-out;
+}
+.scene_container_galerie h1:hover{
+
+    background-size: 100% 100%;
+}
+.container_h1_objet{
+    left: 15%;
+    top: 25%;
+}
+.container_h1_vetement{
+    top: 55%;
+    right: 15%;
+}
