@@ -32,7 +32,7 @@
                 <li class="header_nav_lien_pp" id="header_presentation"><a href="../presentation/presentation.php">PRÉSENTATION</a></li>
                 <li class="header_nav_lien_pp" id="header_contact"><a href="../contact/contact.php">CONTACTS</a>
                     <ul class="header_submenu">
-                        <li class="header_nav_lien_sd"><a href="mailto:contact.laboitenoire@gmail.com" title="contact.laboitenoire@gmail.com">email</a></li>
+                        <li class="header_nav_lien_sd"><a href="mailto:josselin.prevost-devweb@mailo.fr" title="josselin.prevost-devweb@mailo.fr">email</a></li>
                         <li class="header_nav_lien_sd"><a href="https://www.facebook.com/" target="_blank">facebook</a></li>
                         <li class="header_nav_lien_sd"><a href="https://www.pinterest.fr/" target="_blank">pinterest</a></li>
                     </ul>
